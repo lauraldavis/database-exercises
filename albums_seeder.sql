@@ -1,6 +1,6 @@
 USE codeup_test_db;
 
--- TRUNCATE albums;
+TRUNCATE albums;
 
 /*
 CREATE TABLE IF NOT EXISTS albums (
