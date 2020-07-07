@@ -20,21 +20,20 @@ CREATE TABLE IF NOT EXISTS albums (
 -- Convert the SELECT statements to DELETE.
 -- Use the MySQL command line client to make sure your records really were removed.
 
-SELECT 'Albums released after 1991' AS 'MySQL Delete Exercise';
+SELECT 'Albums released after 1991' AS 'Delete Exercise 1';
 SELECT * FROM albums WHERE release_date > 1991;
 DELETE FROM albums WHERE release_date > 1991;
 SELECT * FROM albums WHERE release_date > 1991;
 
-SELECT 'Albums with the genre "disco"' AS 'MySQL Delete Exercise';
-SELECT * FROM albums WHERE genre = 'disco';
-DELETE FROM albums WHERE genre = 'disco';
-SELECT * FROM albums WHERE genre = 'disco';
+SELECT 'Albums with the genre "disco"' AS 'Delete Exercise 2';
+SELECT * FROM albums WHERE genre LIKE '%disco%';
+DELETE FROM albums WHERE genre LIKE '%disco%';
+SELECT * FROM albums WHERE genre LIKE '%disco%';
 
--- SELECT 'Albums by Whitney Houston' AS 'MySQL Delete Exercise';
--- SELECT * FROM albums WHERE artist LIKE '%Whitney Houston%';
+SELECT * FROM albums WHERE artist LIKE '%Whitney Houston%';
 -- Previously deleted due to release_date of 1992
 
-SELECT 'Albums by the Eagles' AS 'MySQL Delete Exercise';
+SELECT 'Albums by the Eagles' AS 'Delete Exercise 3';
 SELECT * FROM albums WHERE artist LIKE '%Eagles%';
 DELETE FROM albums WHERE artist LIKE '%Eagles%';
 SELECT * FROM albums WHERE artist LIKE '%Eagles%';

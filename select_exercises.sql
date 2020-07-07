@@ -12,23 +12,23 @@ CREATE TABLE IF NOT EXISTS albums (
 ) COMMENT='Codeup MySQL Database Exercises';
 */
 
-SELECT 'The name of all albums by Pink Floyd.' AS 'MySQL Select Exercise';
+SELECT 'The name of all albums by Pink Floyd.' AS 'Select Exercise 1';
 SELECT name FROM albums WHERE artist = 'Pink Floyd';
 
-SELECT 'The year Sgt. Pepper''s Lonely Hearts Club Band was released' AS 'MySQL Select Exercise';
+SELECT 'The year Sgt. Pepper''s Lonely Hearts Club Band was released' AS 'Select Exercise 2';
 SELECT release_date FROM albums WHERE name LIKE '%Lonely Hearts Club Band';
 
-SELECT 'The genre for Nevermind' AS 'MySQL Select Exercise';
+SELECT 'The genre for Nevermind' AS 'Select Exercise 3';
 SELECT genre FROM albums WHERE name = 'Nevermind';
 
-SELECT 'Which albums were released in the 1990s' AS 'MySQL Select Exercise';
-SELECT * FROM albums WHERE release_date BETWEEN 1990 AND 1999;
+SELECT 'Which albums were released in the 1990s' AS 'Select Exercise 4';
+SELECT name FROM albums WHERE release_date BETWEEN 1990 AND 1999;
 
-SELECT 'Which albums had less than 20 million certified sales' AS 'MySQL Select Exercise';
-SELECT * FROM albums WHERE sales < 20;
+SELECT 'Which albums had less than 20 million certified sales' AS 'Select Exercise 5';
+SELECT name FROM albums WHERE sales < 20;
 
-SELECT 'All the albums with a genre of "Rock". Why do these query results not include albums with a genre of "Hard rock" or "Progressive rock"?' AS 'MySQL Select Exercise';
+SELECT 'All the albums with a genre of "Rock". Why do these query results not include albums with a genre of "Hard rock" or "Progressive rock"?' AS 'Select Exercise 6';
 SELECT * FROM albums WHERE genre = 'Rock';
 
-SELECT 'All albums with any genre of rock, including "Hard rock" or "Progressive rock"' AS 'MySQL Select Exercise';
+SELECT 'All albums with any genre including any type of rock' AS 'Select Exercise 7';
 SELECT * FROM albums WHERE genre LIKE '%Rock%';
