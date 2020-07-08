@@ -21,6 +21,7 @@ FROM employees
 WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31'
   AND MONTH(birth_date) = 12
   AND DAY(birth_date) = 25;
+-- or you can use LIKE: hire_date LIKE '199%' AND birth_date LIKE '%-12-25';
 
 SELECT *
 FROM employees
