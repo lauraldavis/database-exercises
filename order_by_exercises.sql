@@ -27,9 +27,4 @@ WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31'
 ORDER BY birth_date, hire_date DESC;
 -- or you can use LIKE: hire_date LIKE '199%' AND birth_date LIKE '%12-25'
 
-# SELECT *
-# FROM employees
-# WHERE last_name LIKE '%q%'
-#   AND last_name NOT LIKE '%qu%';
--- alternate solution
--- WHERE last_name REGEXP 'q' AND last_name NOT REGEXP 'qu';
+
