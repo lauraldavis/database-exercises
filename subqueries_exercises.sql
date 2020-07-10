@@ -4,6 +4,7 @@ USE employees;
 SELECT *
 FROM EMPLOYEES
 WHERE hire_date = (SELECT hire_date FROM employees where emp_no = 101010);
+-- 69 rows
 
 -- 2. find all the titles held by all employees with the first name Aamod (not just current titles)
 SELECT t.title
